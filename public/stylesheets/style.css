@@ -1,0 +1,15 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.mongoose-flights-icon {
+  display: block;
+  margin: 0 auto -15px 30px;
+  height: 250px;
+  width: auto;
+}

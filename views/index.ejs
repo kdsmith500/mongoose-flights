@@ -2,15 +2,18 @@
 <html>
   <head>
     <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link rel='stylesheet' href='/stylesheets/style.css'>
   </head>
   <body>
-    <img class="mongoose-flights-icon" src="/images/mongoose-flights-icon.png">
-    <h1><%= title %></h1>
-    <nav class="site-nav">
-      <a href="/flights">All Flights</a>
-      <a href="/flights/new">Add Flights</a>
-    </nav>
-    <p>Welcome to <%= title %></p>
+    <section class="page-flex-column">
+      <img class="mongoose-flights-icon-l" src="/images/mongoose-flights-icon.png">
+      <h1><%= title %></h1>
+      <nav class="site-nav">
+        <a href="/flights">All Flights</a>
+        <a href="/flights/new">Add Flights</a>
+      </nav>
+      <p>Welcome to <%= title %></p>
+    </section>
   </body>
 </html>

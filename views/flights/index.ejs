@@ -5,10 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel='stylesheet' href='/stylesheets/style.css'>
-    <title>Express-Dev-Skills</title>
+    <title>Mongoose-Flights</title>
 </head>
 <body>
     <h1>Mongoose Flights</h1>
+    <nav class="site-nav">        
+        <a href="/flights/new">Add Flight</a>
+        <a href="/">Home</a>
+    </nav>
     <table>
         <thead>
             <tr>
@@ -18,16 +22,19 @@
             </tr>
         </thead>
         <tbody>
-            <% flights.forEach(function(m) { %>
+            <% flights.forEach(function(f) { %>
                 <tr>
-                    <td><%= m.airline %></td>
-                    <td><%= m.flightNo %></td>
-                    <td><%= m.departs %></td>
+                    <% var currentDate = new Date(); %>
+                    <td><%= f.airline %></td>
+                    <td><%= f.flightNo %></td>
+                    <% if (f.departs < currentDate) { %>
+                        <td style="color: red"><%= f.departs %></td>
+                    <% } else { %>
+                        <td><%= f.departs %></td>
+                    <% } %>
                 </tr>
             <% }); %>
         </tbody>
     </table>
-    <a href="/flights/new">Add Flight</a>
-    <a href="/">Home</a>
 </body>
 </html>

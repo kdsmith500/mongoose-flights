@@ -15,9 +15,17 @@ var flightSchema = new Schema({
     },
     departs: {
         type: Date,
-        // default: function () {
-        //     default to 1 year from local date time
-    }}, {
+            default: function () {
+                let date = new Date();
+                let year = date.getFullYear();
+                let month = date.getMonth();
+                let day = date.getDate();
+                let hours = date.getHours();
+                let minutes = date.getMinutes();
+                let seconds = date.getSeconds();
+                let futureDate = new Date(year + 1, month, day, hours, minutes, seconds);
+                return futureDate;
+    }}}, {
         timestamps: true
 });
 

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+  <link rel='stylesheet' href='/stylesheets/style.css'>
+  <title><%= title %></title>
+</head>
+<body>
+    <main>
+        <header>
+            <a href="/"><img class="mongoose-flights-icon-s" src="/images/mongoose-flights-icon.png"></a>
+            <h1>Mongoose Flights</h1>
+        </header>
+        
+        <nav class="partial-nav"> 
+            <div class="nav-bar"> 
+                <!-- <a href="/" <%- title === 'Mongoose Flights' ? 'class="active"' : '' %>>Home</a> -->
+                <a href="/flights" <%- title === 'All Flights' ? 'class="active"' : '' %>>All Flights</a>
+                <a href="/flights/new" <%- title === 'Add Flight' ? 'class="active"' : '' %>>Add Flight</a>
+            </div>
+        </nav>
+
+        <h1 class="partial-h1"><%= title %></h1>

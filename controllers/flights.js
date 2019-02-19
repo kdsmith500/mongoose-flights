@@ -18,7 +18,7 @@ function index(req, res) {
 
 function show(req, res) {
     Flight.findById(req.params.id).populate('tickets').exec(function(err, flight) {
-        // Ticket.find({_id: {$nin: flight.tickets}}).exec(function(err, tickets) {
+        flight.destinations.sort();
         Ticket.find({flight: flight._id}, function(err, tickets) {
             res.render('flights/show', {
                 title: 'Flight Details', flight, tickets

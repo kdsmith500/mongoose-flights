@@ -97,7 +97,7 @@ button, .add-ticket {
   border-right: solid 5px #DFC7B6;
 }
 
-.page-flex-column, .show-sub {
+.page-flex-column, .show-destinations, .show-tickets {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -105,6 +105,10 @@ button, .add-ticket {
   background-color: #FBD469;
   margin: 0 auto;
   width: 60%;
+}
+
+.show-tickets {
+  width: 40%;
 }
 
 .mongoose-flights-icon-l {
@@ -273,4 +277,8 @@ tbody {
 
 .add-ticket:hover {
   transform: rotate(0);
+}
+
+.tickets-table {
+  text-align: center;
 }

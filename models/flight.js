@@ -37,7 +37,7 @@ var flightSchema = new Schema({
     },
     destinations: [destinationSchema],
     tickets: [{
-        type: Object,
+        type: Schema.Types.ObjectId,
         ref: 'Ticket'
     }],
     departs: {

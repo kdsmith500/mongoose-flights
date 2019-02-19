@@ -19,9 +19,9 @@ function create(req, res) {
 
 
 function newTicket(req, res) {
-    Ticket.find({}, function(err, flight) {
+    Flight.findById(req.params.id, function(err, flight) {
         res.render('tickets/new', {
-            title: 'Add Ticket', flightId: req.params.id
+            title: 'Add Ticket', flightId: req.params.id, flight
         });
     });
 }

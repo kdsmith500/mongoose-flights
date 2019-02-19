@@ -1,6 +1,17 @@
 <%- include('../partials/header') %>
 
 <div class="background-div">
+    <section id="show-page">
+        <div>Airline: </div>
+        <div><%= flight.airline %></div>
+        <div>Flight Number: </div>
+        <div><%= flight.flightNo %></div>
+        <div>Airport: </div>
+        <div><%= flight.airport %></div>
+        <div>Departure Time: </div>
+        <div><%= flight.departs %></div>
+    </section>
+
     <form id="new-ticket-form" action="/flights/<%= flightId %>/tickets" method="POST">
         <label>Seat:</label>
         <input name="seat" pattern="[A-F][1-9]\d?">

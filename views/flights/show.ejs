@@ -11,8 +11,32 @@
         <div>Departure Time: </div>
         <div><%= flight.departs %></div>
     </section>
-    
-    <div class="show-destinations">
+    <section class="show-sub">
+        <br><br><h2>Tickets</h2>
+        <% if (flight.tickets.length) { %>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Seat</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <% flight.tickets.forEach(function(t) { %>
+                    <tr>
+                        <td><%= t.seat %></td>
+                        <td><%= t.price %></td>
+                    </tr>
+                <% }); %>
+                </tbody>
+            </table>
+        <% } else { %>
+            <h5>No tickets yet.</h5>
+        <% } %>
+        <a class="add-ticket" href="/flights/<%= flight._id %>/tickets/new">Add Ticket</a>
+    </section>
+
+    <section class="show-sub">
         <br><br><h2>Destinations</h2>
         <form id="add-destination" method="POST" action="/flights/<%= flight._id %>/destinations">
             <label>Airport:</label>
@@ -48,7 +72,7 @@
         <% } else { %>
         <h5>No destinations yet.</h5>
         <% } %>
-    </div>
+    </section>
 </div>
 
 <%- include('../partials/footer') %>

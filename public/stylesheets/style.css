@@ -28,6 +28,10 @@ h2 {
   grid-row: 1;
 }
 
+h5 {
+  text-align: center;
+}
+
 .partial-h1 {
   font-size: 2rem;
   text-align: center;
@@ -70,12 +74,13 @@ header > a:hover {
   transform: rotate(0);
 }
 
-button {
+button, .add-ticket {
   background-color: #804D43;
   color: #DFC7B6;
   font: 10px "Lucida Grande", Helvetica, Arial, sans-serif;
   border-radius: 5px;
   border: solid 2px #DFC7B6;
+  text-align: center;
 }
 
 .home-flex-column {
@@ -92,7 +97,7 @@ button {
   border-right: solid 5px #DFC7B6;
 }
 
-.page-flex-column, .show-destinations {
+.page-flex-column, .show-sub {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -175,7 +180,7 @@ tbody {
   text-align: center;
 }
 
-.new-form {
+.new-form, #new-ticket-form {
   display: grid;
   grid-template-columns: repeat(2, minmax(auto, 22rem));
   /* grid-template-columns: 1fr 1fr;
@@ -183,6 +188,10 @@ tbody {
   grid-gap: 1rem;
   width: 70%;
   margin: 0 auto;
+}
+
+#new-ticket-form {
+  width: 30%;
 }
 
 .new-airline {
@@ -255,4 +264,13 @@ tbody {
   width: 50%;
   margin: 0 auto;
   font-size: 1rem;
+}
+
+.add-ticket {
+  margin: 0 auto;
+  padding: .1rem .25rem;
+}
+
+.add-ticket:hover {
+  transform: rotate(0);
 }

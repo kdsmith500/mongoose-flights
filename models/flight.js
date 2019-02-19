@@ -36,6 +36,10 @@ var flightSchema = new Schema({
         default: 'SEA'
     },
     destinations: [destinationSchema],
+    tickets: [{
+        type: Object,
+        ref: 'Ticket'
+    }],
     departs: {
         type: Date,
             default: function () {

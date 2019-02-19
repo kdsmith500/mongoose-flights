@@ -8,8 +8,6 @@
                     <th>Flight Number</th>
                     <th>Airline</th>
                     <th>Airport</th>
-                    <!-- <th>Destinations</th>
-                    <th></th> -->
                     <th>Departure Time</th>
                 </tr>
             </thead>
@@ -21,8 +19,6 @@
                         <td class="td-number"><%= f.flightNo %></td>
                         <td class="td-airline"><%= f.airline %></td>
                         <td class="td-airport"><%= f.airport %></td>
-                        <!-- <td><%= f.destinations.airport %></td>
-                            <td><%= f.destinations.arrival %></td> -->
                         <% var currentDate = new Date(); %>
                         <% if (f.departs < currentDate) { %>
                             <td class="td-departure" style="color: red"><%= f.departs %></td>
